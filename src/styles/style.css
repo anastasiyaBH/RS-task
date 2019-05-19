@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "Noto Serif Regular";
+  src: url("../assets/fonts/NotoSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Noto Serif Bold";
+  src: url("../assets/fonts/NotoSerif-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Noto Serif Italic";
+  src: url("../assets/fonts/NotoSerif-Italic.ttf");
+}
+
+@keyframes show{
+  0%{
+    opacity:0;
+  }
+
+
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes hide{
+  0%{
+    opacity:1;
+  }
+
+
+  100% {
+    opacity:0;
+  }
+}
+
+@keyframes show-width{
+  0%{
+    width:0;
+  }
+
+
+  100% {
+    width: 70vw;
+  }
+}
+
+.main {
+  background-color:#fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.search-box {
+  margin: 0 auto;
+  display:flex;
+
+  background: linear-gradient(45deg, #fbcd59, #e6edb7);
+
+  line-height: 90%;
+  border-radius: 50px;
+  padding: 2vh 1vw;
+
+  width: 0;
+  overflow: hidden;
+	transition: 1s;
+
+  animation: show-width 1s 1;
+  animation-fill-mode: forwards;
+}
+
+.search-box__search-button{
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 5vh;
+  flex-basis: 5%;
+  margin-left: 1vw;
+}
+
+.search-box__input{
+  background: #fff;
+  border-radius: 50px;
+  border: none;
+
+  width: 100%;
+  font-family: "Noto Serif Bold";
+  color: #36404d;
+  font-size: 3vh;
+}
+
+.clips-line{
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+
+  opacity:0;
+	transition: 1s;
+
+  animation: show 1.5s 1;
+  animation-fill-mode: forwards;
+
+}
+
+/**************************************CLIP*********************************************************/
+.clip{
+  margin: auto 0;
+  background: linear-gradient(90deg, #fbcd59, #e6edb7);
+  border-radius: 50px;
+  padding: 10px 0;
+  width: 250px;
+  height: 65vh;
+
+  display:flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.clip__image{
+  width: 100%;
+  height: 200px;
+  background-color: #fbcd59;
+  display: flex;
+  position: relative;
+}
+
+.clip__image img{
+  z-index: 1;
+}
+
+.clip__background-title{
+  background: #87ae45c2;
+  margin: auto;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index:2;
+
+  transition-property: border-top-left-radius, border-bottom-right-radius;
+  transition-duration: 1s;
+}
+
+.clip__background-title:hover{
+  background: #87ae45;
+  border-top-left-radius: 100% 50px;
+  border-bottom-right-radius: 100% 50px;
+}
+
+.clip__title {
+  margin: auto;
+  font-family: "Noto Serif Bold";
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.description-list{
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.description-list__item{
+  padding:0;
+  display: flex;
+  justify-content: center;
+  color: #36404d;
+}
+
+.description-list__item i{
+  width: 10%;
+  text-align: center;
+}
+
+.description-list__item h3{
+  width: 60%;
+  margin: 0px 0 5px 10px;
+  text-align: center;
+  font-size: 1.10rem;
+}
+
+.description-list__item p{
+  width: 100%;
+  padding: 0;
+  text-align: justify;
+  font-family: "Noto Serif Italic";
+  font-size: 10px;
+}
+
+/************************************* DOTS *************************************/
+.slider__slider-dot {
+  width: 4vw;
+  height: 4vw;
+  background: #87ae45c2;
+  border: 2px solid#87ae45c2;
+  border-radius: 50%;
+  margin: 0 0.5vw;
+  transition-duration: 1s;
+  font-family: "Noto Serif Bold";
+  color: #36404d;
+  font-size: 1.7vw;
+}
+
+.slider__slider-dot:hover {
+  transform: scale(1.2);
+  background: linear-gradient(90deg, #fbcd59, #e6edb7);
+}
+
+.dot_active {
+  background: linear-gradient(90deg, #fbcd59, #e6edb7);
+}
+
+/********************************** Slider *****************************************/
+.slider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.dots-line {
+  display: flex;
+  justify-content: center;
+
+  opacity:0;
+	transition: 5s;
+  animation: show 5s 1;
+  animation-fill-mode: forwards;
+}
+
+
+/********************************* loadImage *************************************/
+.loadImage {
+  margin: auto;
+  opacity:0;
+	transition: 1s;
+
+  animation: show 1.5s 1;
+  animation-fill-mode: forwards;
+}
+
