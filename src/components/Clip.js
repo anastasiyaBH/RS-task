@@ -3,8 +3,6 @@ export default class Clip {
     this.clipInform = clipInform;
     this.clip = document.createElement('div');
     this.clip.className = 'clip';
-
-    this.createClipCard();
   }
 
   createClipCard() {
