@@ -15,7 +15,7 @@ export default class App {
     const searchBox = new SearchBox().getSearchBox();
     this.main.appendChild(searchBox);
 
-    const loadImage = new LoadImage('../src/assets/img/icon-youtube1.png').getLoadImage();
+    const loadImage = new LoadImage('../../src/assets/img/icon-youtube1.png').getLoadImage();
     this.main.appendChild(loadImage);
 
     searchBox.addEventListener('keypress', (event) => {
